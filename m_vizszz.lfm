@@ -1,0 +1,1624 @@
+object FVizSzz: TFVizSzz
+  Left = 350
+  Height = 569
+  Top = 110
+  Width = 944
+  Caption = 'VizSzz'
+  ClientHeight = 569
+  ClientWidth = 944
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  SessionProperties = 'f_diap.Checked;f_one.AutoFillColumns;Height;MPOne_AutoCol.Checked;MPOne_autoEdit.Checked;Position;Width;WindowState'
+  LCLVersion = '2.0.12.0'
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 546
+    Width = 944
+    Panels = <    
+      item
+        Width = 40
+      end>
+    ParentFont = False
+    SimplePanel = False
+  end
+  object ProgressBar1: TProgressBar
+    AnchorSideTop.Control = StatusBar
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = StatusBar
+    AnchorSideBottom.Side = asrBottom
+    Left = 820
+    Height = 23
+    Top = 546
+    Width = 120
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Right = 4
+    Max = 0
+    ParentFont = False
+    Step = 1
+    TabOrder = 0
+    Visible = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 168
+    Top = 0
+    Width = 944
+    Align = alTop
+    Anchors = []
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 168
+    ClientWidth = 944
+    TabOrder = 1
+    object f_xmlSave: TButton
+      AnchorSideLeft.Control = f_diap
+      AnchorSideTop.Control = f_load
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = f_load
+      AnchorSideRight.Side = asrBottom
+      Left = 106
+      Height = 25
+      Top = 35
+      Width = 96
+      BorderSpacing.Top = 5
+      Caption = 'Сохранить в xml'
+      OnClick = f_xmlSaveClick
+      TabOrder = 2
+      Visible = False
+    end
+    object f_frec: TStringGrid
+      AnchorSideLeft.Control = f_diap
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 207
+      Height = 163
+      Top = 5
+      Width = 406
+      AlternateColor = 15397098
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 5
+      ColCount = 6
+      Columns = <      
+        item
+          Title.Caption = 'Технология'
+          Width = 70
+        end      
+        item
+          Title.Caption = 'Диапазон, f'
+          Width = 70
+        end      
+        item
+          Title.Caption = 'частота от , МГц'
+          Width = 95
+        end      
+        item
+          Title.Caption = 'частота до , МГц'
+          Width = 95
+        end      
+        item
+          ButtonStyle = cbsCheckboxColumn
+          Title.Caption = 'Вкл'
+          Width = 27
+        end>
+      DefaultColWidth = 80
+      DefaultRowHeight = 20
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goColSizing, goEditing, goAutoAddRows, goTabs, goRowSelect, goDblClickAutoSize, goSmoothScroll, goFixedRowNumbering, goDontScrollPartCell]
+      Options2 = [goScrollToLastRow]
+      ParentFont = False
+      PopupMenu = PopupM_Tdata
+      RowCount = 29
+      TabOrder = 5
+      TitleStyle = tsNative
+      Visible = False
+      ColWidths = (
+        28
+        70
+        70
+        95
+        95
+        27
+      )
+      Cells = (
+        146
+        0
+        0
+        '№'
+        1
+        0
+        'Технология'
+        1
+        1
+        'GSM'
+        1
+        2
+        'DCS'
+        1
+        3
+        'UMTS-TDD'
+        1
+        4
+        'UMTS'
+        1
+        5
+        'LTE'
+        1
+        6
+        'LTE'
+        1
+        7
+        'LTE'
+        1
+        8
+        'LTE'
+        1
+        9
+        'РРС'
+        1
+        10
+        'РРС'
+        1
+        11
+        'РРС'
+        1
+        12
+        'РРС'
+        1
+        13
+        'РРС'
+        1
+        14
+        'РРС'
+        1
+        15
+        'РРС'
+        1
+        16
+        'РРС'
+        1
+        17
+        'РРС'
+        1
+        18
+        'РРС'
+        1
+        19
+        'РРС'
+        1
+        20
+        'РРС'
+        1
+        21
+        'РРС'
+        1
+        22
+        'РРС'
+        1
+        23
+        'РРС'
+        1
+        24
+        '5G'
+        1
+        25
+        '5G'
+        1
+        26
+        '5G'
+        1
+        27
+        '5G'
+        1
+        28
+        '5G'
+        2
+        0
+        'Диапазон, f'
+        2
+        1
+        '900'
+        2
+        2
+        '1800'
+        2
+        3
+        '2100'
+        2
+        4
+        '2100'
+        2
+        5
+        '800'
+        2
+        6
+        '400'
+        2
+        7
+        '2600'
+        2
+        8
+        '2500'
+        2
+        9
+        '8000'
+        2
+        10
+        '7000'
+        2
+        11
+        '10000'
+        2
+        12
+        '9000'
+        2
+        13
+        '12000'
+        2
+        14
+        '11000'
+        2
+        15
+        '15000'
+        2
+        16
+        '13000'
+        2
+        17
+        '18000'
+        2
+        18
+        '17000'
+        2
+        19
+        '22000'
+        2
+        20
+        '20000'
+        2
+        21
+        '26000'
+        2
+        22
+        '23000'
+        2
+        23
+        '27000'
+        2
+        24
+        '700'
+        2
+        25
+        '2300'
+        2
+        26
+        '2500'
+        2
+        27
+        '4000'
+        2
+        28
+        '24000'
+        3
+        0
+        'частота от , МГц'
+        3
+        1
+        '925'
+        3
+        2
+        '1800'
+        3
+        3
+        '2010'
+        3
+        4
+        '2110'
+        3
+        5
+        '790'
+        3
+        6
+        '450'
+        3
+        7
+        '2620'
+        3
+        8
+        '2570'
+        3
+        9
+        '8000'
+        3
+        10
+        '7000'
+        3
+        11
+        '10000'
+        3
+        12
+        '9000'
+        3
+        13
+        '12000'
+        3
+        14
+        '11000'
+        3
+        15
+        '15000'
+        3
+        16
+        '13000'
+        3
+        17
+        '18000'
+        3
+        18
+        '17000'
+        3
+        19
+        '22000'
+        3
+        20
+        '20000'
+        3
+        21
+        '26000'
+        3
+        22
+        '23000'
+        3
+        23
+        '27000'
+        3
+        24
+        '694'
+        3
+        25
+        '2300'
+        3
+        26
+        '2570'
+        3
+        27
+        '4400'
+        3
+        28
+        '24250'
+        4
+        0
+        'частота до , МГц'
+        4
+        1
+        '960'
+        4
+        2
+        '1880'
+        4
+        3
+        '2025'
+        4
+        4
+        '2170'
+        4
+        5
+        '820'
+        4
+        6
+        '459'
+        4
+        7
+        '2690'
+        4
+        8
+        '2620'
+        4
+        9
+        '8999'
+        4
+        10
+        '7999'
+        4
+        11
+        '10999'
+        4
+        12
+        '9999'
+        4
+        13
+        '12999'
+        4
+        14
+        '11999'
+        4
+        15
+        '15999'
+        4
+        16
+        '13999'
+        4
+        17
+        '18999'
+        4
+        18
+        '17999'
+        4
+        19
+        '22999'
+        4
+        20
+        '20999'
+        4
+        21
+        '26999'
+        4
+        22
+        '23999'
+        4
+        23
+        '27999'
+        4
+        24
+        '790'
+        4
+        25
+        '2400'
+        4
+        26
+        '2620'
+        4
+        27
+        '4990'
+        4
+        28
+        '27500'
+        5
+        0
+        'вкл'
+        5
+        1
+        '1'
+        5
+        2
+        '1'
+        5
+        3
+        '1'
+        5
+        4
+        '1'
+        5
+        5
+        '1'
+        5
+        6
+        '1'
+        5
+        7
+        '1'
+        5
+        8
+        '1'
+        5
+        9
+        '1'
+        5
+        10
+        '1'
+        5
+        11
+        '1'
+        5
+        12
+        '1'
+        5
+        13
+        '1'
+        5
+        14
+        '1'
+        5
+        15
+        '1'
+        5
+        16
+        '1'
+        5
+        17
+        '1'
+        5
+        18
+        '1'
+        5
+        19
+        '1'
+        5
+        20
+        '1'
+        5
+        21
+        '1'
+        5
+        22
+        '1'
+        5
+        23
+        '1'
+        5
+        24
+        '1'
+        5
+        25
+        '1'
+        5
+        26
+        '1'
+        5
+        27
+        '1'
+        5
+        28
+        '1'
+      )
+    end
+    object f_diap: TToggleBox
+      AnchorSideLeft.Control = f_load
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 106
+      Height = 25
+      Top = 5
+      Width = 96
+      BorderSpacing.Around = 5
+      Caption = 'Технология->'
+      OnChange = f_diapChange
+      TabOrder = 4
+    end
+    object f_load: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 5
+      Height = 25
+      Hint = 'Преобразовать файл выгруженный из ПО Vizir'
+      Top = 5
+      Width = 96
+      BorderSpacing.Around = 5
+      Caption = 'Выбрать xlsx'
+      OnClick = f_loadClick
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object f_xmlOpen: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = f_load
+      AnchorSideTop.Side = asrBottom
+      Left = 5
+      Height = 25
+      Top = 35
+      Width = 96
+      BorderSpacing.Around = 5
+      Caption = 'Открыть xml'
+      OnClick = f_xmlOpenClick
+      TabOrder = 1
+    end
+    object f_bAddRow: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = f_xmlOpen
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 5
+      Height = 25
+      Hint = 'Добавить строку в таблицу'
+      Top = 65
+      Width = 34
+      AutoSize = True
+      BorderSpacing.Around = 5
+      Caption = '+'
+      OnClick = f_bAddRowClick
+      TabOrder = 3
+    end
+  end
+  object f_PCTabl: TPageControl
+    AnchorSideTop.Control = Panel1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 378
+    Top = 168
+    Width = 944
+    ActivePage = param
+    Align = alClient
+    TabIndex = 1
+    TabOrder = 3
+    object opis: TTabSheet
+      Caption = 'Описание ПРТО'
+      ClientHeight = 350
+      ClientWidth = 936
+      object f_Topis: TStringGrid
+        Left = 0
+        Height = 350
+        Top = 0
+        Width = 936
+        Align = alClient
+        AlternateColor = 16777192
+        Color = clInactiveBorder
+        ColCount = 4
+        ColumnClickSorts = True
+        Columns = <        
+          item
+            Title.Caption = 'Значение'
+            Width = 400
+          end>
+        DefaultColWidth = 65
+        DefaultRowHeight = 23
+        FixedCols = 3
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goColSizing, goEditing, goAutoAddRows, goTabs, goRowSelect, goThumbTracking, goRelaxedRowSelect, goDblClickAutoSize, goSmoothScroll, goFixedRowNumbering, goFixedColSizing, goDontScrollPartCell, goRowHighlight]
+        ParentFont = False
+        RowCount = 21
+        TabOrder = 0
+        ColWidths = (
+          27
+          39
+          186
+          400
+        )
+        Cells = (
+          50
+          0
+          0
+          '№'
+          1
+          0
+          'xml'
+          1
+          1
+          'id'
+          1
+          2
+          'name'
+          1
+          3
+          'full_name'
+          1
+          4
+          'address'
+          1
+          5
+          'Owner_Address'
+          1
+          6
+          'Owner_Name'
+          1
+          7
+          'Info_about_trx_type'
+          1
+          8
+          'Info_about_recostruction'
+          1
+          9
+          'Info_about_work_time'
+          1
+          10
+          'Info_about_start_data'
+          1
+          11
+          'is_active'
+          1
+          12
+          'B'
+          1
+          13
+          'L'
+          1
+          14
+          'Info_about_ant_mount'
+          1
+          15
+          'Info_about_equip_mount'
+          1
+          16
+          'Info_about_another_antennas'
+          1
+          17
+          'Info_about_area_around'
+          1
+          18
+          'Comment_1'
+          1
+          19
+          'Comment_2'
+          1
+          20
+          'Comment_3'
+          2
+          0
+          'Параметр'
+          2
+          1
+          '№ п.п.'
+          2
+          2
+          'Краткое наименование ПРТО'
+          2
+          3
+          'Полное наименование ПРТО'
+          2
+          4
+          'Адрес установки'
+          2
+          5
+          'Адрес организации'
+          2
+          6
+          'Организация'
+          2
+          7
+          'Технологии заказчика'
+          2
+          8
+          'Реконструкция'
+          2
+          9
+          'Длительность работы РЭС'
+          2
+          10
+          'Год создания ПРТО'
+          2
+          11
+          'Учитывать ПРТО в работе (-1)'
+          2
+          12
+          'Широта'
+          2
+          13
+          'Долгота'
+          3
+          0
+          'Значение'
+          3
+          1
+          '1'
+          3
+          2
+          'ПРТО'
+          3
+          3
+          'Базовая станция '
+          3
+          4
+          'Новосибирская область, '
+          3
+          5
+          'Российская Федерация, '
+          3
+          6
+          'ООО &quot; &quot;'
+          3
+          7
+          'DCS-900/1800, UMTS, LTE-800/1800/2100/2600'
+          3
+          8
+          '2021 г.'
+          3
+          9
+          'круглосуточный, круглогодичный'
+          3
+          10
+          '2014 г.'
+          3
+          11
+          '-1'
+          3
+          12
+          '54.432735'
+          3
+          13
+          '83.34108'
+        )
+      end
+    end
+    object param: TTabSheet
+      Caption = 'Параметры'
+      ClientHeight = 350
+      ClientWidth = 936
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = 16512
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold, fsUnderline]
+      ParentFont = False
+      object f_Tparam: TStringGrid
+        Left = 0
+        Height = 350
+        Top = 0
+        Width = 936
+        Align = alClient
+        AlternateColor = 16777192
+        Color = clInactiveBorder
+        ColCount = 1
+        ColumnClickSorts = True
+        Columns = <        
+          item
+            Title.Caption = '№'
+            Width = 30
+          end>
+        DefaultColWidth = 65
+        DefaultRowHeight = 23
+        FixedCols = 0
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goColSizing, goColMoving, goEditing, goAutoAddRows, goTabs, goThumbTracking, goDblClickAutoSize, goSmoothScroll, goHeaderHotTracking, goDontScrollPartCell, goRowHighlight]
+        Options2 = [goScrollToLastRow]
+        ParentFont = False
+        PopupMenu = PopupM_Tdata
+        RowCount = 1
+        TabOrder = 0
+        TitleStyle = tsNative
+        OnDrawCell = f_TparamDrawCell
+        OnButtonClick = f_TparamButtonClick
+        ColWidths = (
+          30
+        )
+      end
+    end
+    object zdan: TTabSheet
+      Caption = 'Здания, дороги,...'
+      ClientHeight = 350
+      ClientWidth = 936
+      object f_Tzdan: TStringGrid
+        Left = 0
+        Height = 350
+        Top = 0
+        Width = 936
+        Align = alClient
+        AlternateColor = 16777192
+        Color = clInactiveBorder
+        ColCount = 14
+        ColumnClickSorts = True
+        Columns = <        
+          item
+            ButtonStyle = cbsCheckboxColumn
+            Color = clWindow
+            Title.Alignment = taRightJustify
+            Title.Caption = 'Вкл'
+            Width = 29
+            ValueChecked = '-1'
+          end        
+          item
+            Title.Caption = 'Текст'
+            Width = 70
+          end        
+          item
+            ButtonStyle = cbsPickList
+            PickList.Strings = (
+              'Здание'
+              'Растительность'
+              'Водоём'
+              'Дорога'
+            )
+            Title.Caption = 'Тип'
+            Width = 96
+          end        
+          item
+            Color = 16770804
+            Title.Caption = 'Высота'
+            Width = 55
+          end        
+          item
+            ButtonStyle = cbsCheckboxColumn
+            Title.Caption = 'Отражение от пповерхности'
+            Width = 73
+            ValueChecked = '-1'
+          end        
+          item
+            Title.Caption = 'Коэф. отражения [0..1]'
+            Width = 67
+          end        
+          item
+            ButtonStyle = cbsButtonColumn
+            Title.Caption = 'Цвет'
+            Width = 55
+          end        
+          item
+            ButtonStyle = cbsCheckboxColumn
+            Title.Caption = 'Вкл. поглащение'
+            Width = 66
+            ValueChecked = '-1'
+          end        
+          item
+            Color = 12188092
+            Title.Caption = 'Поглащение, дБ/м'
+            Width = 76
+          end        
+          item
+            Title.Caption = 'Поглащение на метр'
+            Width = 65
+          end        
+          item
+            ButtonStyle = cbsCheckboxColumn
+            Title.Caption = 'Потери P.2346 (для зданий)'
+            Width = 70
+            ValueChecked = '-1'
+          end        
+          item
+            Title.Caption = 'Точки'
+            Width = 91
+          end        
+          item
+            Title.Caption = 'Коментарий'
+            Width = 91
+          end>
+        DefaultColWidth = 65
+        DefaultRowHeight = 23
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goColSizing, goColMoving, goEditing, goAutoAddRows, goTabs, goRowSelect, goThumbTracking, goDblClickAutoSize, goSmoothScroll, goFixedRowNumbering, goDontScrollPartCell]
+        Options2 = [goScrollToLastRow]
+        ParentFont = False
+        RowCount = 1
+        TabOrder = 0
+        TitleStyle = tsNative
+        OnDrawCell = f_TzdanDrawCell
+        OnButtonClick = f_TzdanButtonClick
+        ColWidths = (
+          24
+          29
+          70
+          96
+          55
+          73
+          67
+          55
+          66
+          76
+          65
+          70
+          91
+          91
+        )
+        Cells = (
+          12
+          0
+          0
+          ' №'
+          1
+          0
+          'Вкл'
+          2
+          0
+          'опис'
+          3
+          0
+          'тип'
+          4
+          0
+          'h'
+          5
+          0
+          'отраж бул'
+          6
+          0
+          'отраж'
+          7
+          0
+          'кометн'
+          8
+          0
+          'затух бул'
+          9
+          0
+          'затух'
+          12
+          0
+          'Р2346'
+          13
+          0
+          'затух'
+        )
+      end
+    end
+    object toch: TTabSheet
+      Caption = 'Контрольные точки'
+      ClientHeight = 350
+      ClientWidth = 936
+      object f_Tkt: TStringGrid
+        AnchorSideLeft.Control = toch
+        AnchorSideRight.Control = toch
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = toch
+        AnchorSideBottom.Side = asrBottom
+        Left = 0
+        Height = 350
+        Top = 0
+        Width = 936
+        Align = alClient
+        AlternateColor = 16777192
+        Color = clInactiveBorder
+        ColCount = 9
+        ColumnClickSorts = True
+        Columns = <        
+          item
+            ButtonStyle = cbsCheckboxColumn
+            Color = clWindow
+            Title.Caption = 'вкл'
+            Width = 31
+            ValueChecked = '-1'
+          end        
+          item
+            Title.Caption = 'Название'
+            Width = 125
+          end        
+          item
+            Title.Caption = 'Высота, м'
+            Width = 60
+          end        
+          item
+            Title.Caption = 'Широта'
+            Width = 107
+          end        
+          item
+            Title.Caption = 'Долгота'
+            Width = 108
+          end        
+          item
+            ButtonStyle = cbsPickList
+            DropDownRows = 3
+            PickList.Strings = (
+              'Е, В/м'
+              'ППЭ, мкВт/см2'
+            )
+            Title.Caption = 'ПДУ-тип'
+            Width = 70
+          end        
+          item
+            Color = 13562621
+            Title.Caption = 'Коментарии'
+            Width = 126
+          end        
+          item
+            Color = 16770804
+            Title.Caption = 'measure'
+            Width = 34
+          end>
+        DefaultColWidth = 65
+        DefaultRowHeight = 23
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goColSizing, goColMoving, goEditing, goAutoAddRows, goTabs, goRowSelect, goThumbTracking, goDblClickAutoSize, goSmoothScroll, goFixedRowNumbering, goDontScrollPartCell]
+        Options2 = [goScrollToLastRow]
+        ParentFont = False
+        RowCount = 1
+        TabOrder = 0
+        TitleStyle = tsNative
+        ColWidths = (
+          28
+          31
+          125
+          60
+          107
+          108
+          70
+          126
+          34
+        )
+        Cells = (
+          9
+          0
+          0
+          ' №'
+          1
+          0
+          'вкл'
+          2
+          0
+          'надпись'
+          3
+          0
+          'h'
+          4
+          0
+          'штр'
+          5
+          0
+          'долг'
+          6
+          0
+          'm_type'
+          7
+          0
+          'комент'
+          8
+          0
+          'mes'
+        )
+      end
+    end
+    object zoz: TTabSheet
+      Caption = 'Высоты ЗОЗ'
+      ClientHeight = 350
+      ClientWidth = 801
+      object f_Tzoz: TStringGrid
+        AnchorSideLeft.Control = zoz
+        AnchorSideTop.Control = btZOZavto
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = zoz
+        AnchorSideBottom.Control = zoz
+        Left = 0
+        Height = 325
+        Top = 25
+        Width = 801
+        Align = alBottom
+        AlternateColor = 16777192
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Color = clInactiveBorder
+        ColumnClickSorts = True
+        Columns = <        
+          item
+            ButtonStyle = cbsCheckboxColumn
+            Title.Caption = 'вкл'
+            Width = 30
+            ValueChecked = '-1'
+          end        
+          item
+            Color = clWindow
+            Title.Caption = 'Высота ЗОЗ'
+            Width = 75
+          end        
+          item
+            ButtonStyle = cbsButton
+            Title.Caption = 'Цвет границы'
+            Width = 79
+          end        
+          item
+            Title.Caption = 'Описание'
+            Width = 442
+          end>
+        DefaultColWidth = 65
+        DefaultRowHeight = 23
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goColMoving, goEditing, goAutoAddRows, goTabs, goDblClickAutoSize, goSmoothScroll, goFixedRowNumbering, goDontScrollPartCell]
+        Options2 = [goScrollToLastRow]
+        ParentFont = False
+        RowCount = 1
+        TabOrder = 0
+        TitleStyle = tsNative
+        OnDrawCell = f_TzozDrawCell
+        OnButtonClick = f_TzozButtonClick
+        ColWidths = (
+          28
+          30
+          75
+          79
+          442
+        )
+        Cells = (
+          5
+          0
+          0
+          ' №'
+          1
+          0
+          'вкл'
+          2
+          0
+          'высота ЗОЗ'
+          3
+          0
+          'Цвет'
+          4
+          0
+          'опис'
+        )
+      end
+      object btZOZavto: TButton
+        AnchorSideLeft.Control = zoz
+        AnchorSideTop.Control = zoz
+        AnchorSideRight.Control = btZOZdel
+        Left = 0
+        Height = 25
+        Hint = 'Встановить ЗОЗ во всем высотам антенн'
+        Top = 0
+        Width = 163
+        AutoSize = True
+        Caption = 'Автозаполнение по ЦПА'
+        OnClick = btZOZavtoClick
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+      end
+      object btZOZdel: TButton
+        AnchorSideLeft.Control = btZOZzdan
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = zoz
+        AnchorSideRight.Control = zoz
+        AnchorSideRight.Side = asrBottom
+        Left = 361
+        Height = 25
+        Top = 0
+        Width = 110
+        AutoSize = True
+        BorderSpacing.Left = 10
+        Caption = 'Удалить строку'
+        OnClick = btZOZdelClick
+        TabOrder = 2
+      end
+      object btZOZzdan: TButton
+        AnchorSideLeft.Control = btZOZavto
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = zoz
+        Left = 173
+        Height = 25
+        Top = 0
+        Width = 178
+        AutoSize = True
+        BorderSpacing.Left = 10
+        Caption = 'Добавить по высоте зданий'
+        OnClick = btZOZzdanClick
+        TabOrder = 3
+      end
+    end
+    object nadp: TTabSheet
+      Caption = 'Надписи на карте'
+      ClientHeight = 350
+      ClientWidth = 936
+      object f_Tnad: TStringGrid
+        Left = 0
+        Height = 350
+        Top = 0
+        Width = 936
+        Align = alClient
+        AlternateColor = 16777192
+        Color = clInactiveBorder
+        ColCount = 6
+        ColumnClickSorts = True
+        Columns = <        
+          item
+            ButtonStyle = cbsCheckboxColumn
+            Color = clWindow
+            Title.Caption = 'вкл'
+            Width = 31
+            ValueChecked = '-1'
+          end        
+          item
+            Title.Caption = 'Надпись'
+            Width = 158
+          end        
+          item
+            Title.Caption = 'Широта'
+            Width = 88
+          end        
+          item
+            Title.Caption = 'Долгота'
+            Width = 87
+          end        
+          item
+            Title.Caption = 'Коментарий'
+            Width = 200
+          end>
+        DefaultColWidth = 65
+        DefaultRowHeight = 23
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goColSizing, goColMoving, goEditing, goAutoAddRows, goTabs, goRowSelect, goThumbTracking, goDblClickAutoSize, goSmoothScroll, goFixedRowNumbering, goDontScrollPartCell]
+        Options2 = [goScrollToLastRow]
+        ParentFont = False
+        RowCount = 1
+        TabOrder = 0
+        TitleStyle = tsNative
+        ColWidths = (
+          28
+          31
+          158
+          88
+          87
+          200
+        )
+        Cells = (
+          6
+          0
+          0
+          ' №'
+          1
+          0
+          'вкл'
+          2
+          0
+          'надпись'
+          3
+          0
+          'широта'
+          4
+          0
+          'долгота'
+          5
+          0
+          'комент'
+        )
+      end
+    end
+  end
+  object RollOutDoc: TMyRollOut
+    AnchorSideLeft.Control = RollOutLic
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 616
+    Height = 27
+    Top = 32
+    Width = 324
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 32
+    BorderSpacing.Right = 4
+    BevelInner = bvSpace
+    ClientHeight = 27
+    ClientWidth = 324
+    Enabled = True
+    TabOrder = 5
+    CollapseKind = akTop
+    ExpandedSize = 250
+    ButtonPosition = akTop
+    ButtonSize = 27
+    Button.Left = 0
+    Button.Height = 27
+    Button.Top = 0
+    Button.Width = 324
+    Button.Caption = 'Описание'
+    Button.Color = clSkyBlue
+    Button.ColorExpanded = clBlue
+    Button.GlyphLayout = glRight
+    Button.TextLayout = tlCenter
+    Button.Style = bbsLineDouble
+    AnimationSpeed = 10
+    Collapsed = True
+    BevelColorHighlight = clAqua
+    OnPreExpand = RollOutLicPreExpand
+    OnCollapse = RollOutLicCollapse
+    object license1: TMemo
+      Left = 2
+      Height = 0
+      Top = 27
+      Width = 320
+      Align = alClient
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Lines.Strings = (
+        '- Можно редактировать проекты созданные в ONEPLAN Sazon (*.xml)'
+        '- ПО VizSzz пытается определить количество передатчиков у РЭС исходя из:'
+        '  владельца, технологии, мощности, высоты, азимута РЭС и свидетельства.'
+        '- При сохранении в файл *.xml подставляются общие данные (вместе с ДН), '
+        'и можно сразу делать расчёт в ONEPLAN Sazon.'
+        ''
+        'ПО VizSzz  можно запускать с параметрами:'
+        'VizSzz.exe <ключ> <путь+файл>'
+        #9'<ключ> - может отсутствовать или стоять "-f"  '
+        '                   -fd  -  после преобразования исходный excel файл удаляется.'
+      )
+      ParentBidiMode = False
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+      TabStop = False
+    end
+  end
+  object RollOutLic: TMyRollOut
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 616
+    Height = 27
+    Top = 5
+    Width = 324
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 4
+    BevelInner = bvSpace
+    ClientHeight = 27
+    ClientWidth = 324
+    Enabled = True
+    TabOrder = 4
+    CollapseKind = akTop
+    ExpandedSize = 277
+    ButtonPosition = akTop
+    ButtonSize = 27
+    Button.Left = 0
+    Button.Height = 27
+    Button.Top = 0
+    Button.Width = 324
+    Button.Caption = 'Лицензия Free softWare'
+    Button.Color = clSkyBlue
+    Button.ColorExpanded = clBlue
+    Button.GlyphLayout = glRight
+    Button.TextLayout = tlCenter
+    Button.Style = bbsLineDouble
+    AnimationSpeed = 10
+    Collapsed = True
+    BevelColorHighlight = clAqua
+    OnPreExpand = RollOutLicPreExpand
+    OnCollapse = RollOutLicCollapse
+    object license: TMemo
+      Left = 2
+      Height = 0
+      Top = 27
+      Width = 320
+      Align = alClient
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Lines.Strings = (
+        #9'VizSzz'
+        '                   ------'
+        'Company: Santig'
+        'e-mail:  '#9' san@santig.ru'
+        'URL:       '#9' http://santig.ru'
+        'License:   '#9' zlib'
+        '-----------------------------'
+        ''
+        ' Copyright (c) 2021 Santig'
+        ''
+        'This software is provided ''as-is'', without any express or implied'
+        'warranty. In no event will the authors be held liable for any damages'
+        'arising from the use of this software.'
+        ''
+        'Permission is granted to anyone to use this software for any purpose,'
+        'including commercial applications, and to alter it and redistribute it'
+        'freely, subject to the following restrictions:'
+        ''
+        '1. The origin of this software must not be misrepresented; you must not'
+        '   claim that you wrote the original software. If you use this software'
+        '   in a product, an acknowledgement in the product documentation would be'
+        '   appreciated but is not required.'
+        '2. Altered source versions must be plainly marked as such, and must not be'
+        '   misrepresented as being the original software.'
+        '3. This notice may not be removed or altered from any source distribution. '
+      )
+      ParentBidiMode = False
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+      TabStop = False
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Title = 'Открыть эксель файл из Визира'
+    DefaultExt = '.xlsx'
+    Filter = 'эксель Vizir|*.xlsx;*.xls|все файлы|*.*'
+    Left = 16
+    Top = 88
+  end
+  object IniPropStorage1: TIniPropStorage
+    StoredValues = <>
+    IniFileName = 'VizSzz.ini'
+    Left = 269
+    Top = 288
+  end
+  object SaveDialog1: TSaveDialog
+    Title = 'Сохранить xml файл для onePlan'
+    DefaultExt = '.xml'
+    Filter = 'onePlan|*.xml|все файлы|*.*'
+    Left = 152
+    Top = 104
+  end
+  object PopupM_Tdata: TPopupMenu
+    Left = 246
+    Top = 232
+    object MPOne_Del: TMenuItem
+      Caption = 'Удалить строку'
+      OnClick = MPOne_DelClick
+    end
+    object MPOne_1: TMenuItem
+      Caption = '-'
+    end
+    object MPOne_AutoCol: TMenuItem
+      AutoCheck = True
+      Caption = 'АвтоШирина'
+      OnClick = MPOne_AutoColClick
+    end
+    object MPOne_2: TMenuItem
+      Caption = '-'
+    end
+    object MPOne_Save: TMenuItem
+      Caption = 'Сохранить в файл'
+      OnClick = MPOne_SaveClick
+    end
+  end
+  object PopupM_diap: TPopupMenu
+    Left = 440
+    Top = 72
+    object MPDiap_del: TMenuItem
+      Caption = 'Удалить строку'
+      OnClick = MPDiap_delClick
+    end
+  end
+  object OpenDlgXml: TOpenDialog
+    Title = 'Открыть xml файл OnePlan sazon'
+    DefaultExt = '.xml'
+    Filter = 'OnePlan sazon|*.xml|все файлы|*.*'
+    Left = 80
+    Top = 104
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    Left = 112
+    Top = 64
+  end
+end

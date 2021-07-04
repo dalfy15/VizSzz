@@ -1,0 +1,34 @@
+object myFs: TmyFs
+  Left = 1286
+  Height = 107
+  Top = 152
+  Width = 253
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'доп'
+  DefaultMonitor = dmDesktop
+  FormStyle = fsSplash
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.0.12.0'
+  object Log: TEventLog
+    AppendContent = False
+    Identification = '-'
+    LogType = ltFile
+    Active = False
+    RaiseExceptionOnError = False
+    DefaultEventType = etCustom
+    FileName = 'Logs.log'
+    CustomLogType = 0
+    EventIDOffset = 0
+    Paused = False
+    Left = 6
+    Top = 6
+  end
+  object IniF: TIniPropStorage
+    StoredValues = <>
+    IniSection = 'fs'
+    Left = 70
+    Top = 6
+  end
+end
