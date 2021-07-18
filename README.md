@@ -6,7 +6,7 @@
   Companiya:     Santig
   e-mail:        san@santig.ru
   URL:           http://santig.ru
-  License:       zlib
+ License:      MIT
   Create:        04.01.2021
   Last update:   2021.06.26
 
