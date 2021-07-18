@@ -18,4 +18,4 @@
     http://wiki.lazarus.freepascal.org/TMyRollOut_and_ExpandPanel 
 	
 	
-(c) the Santig, licensed under zLib license
+(c) the Santig, licensed under MIT license
